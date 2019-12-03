@@ -7,8 +7,9 @@ namespace Car_sales.Models
 {
     public class Customers
     {
-        public long Customers_ID { get; set; }
-        public string Customer_Details { get; set; }
-        
+        public long CustomerId { get; set; }
+        public string CustomerDetails { get; set; }
+
+        public List<Sales> Sales { get; set; }
     }
 }

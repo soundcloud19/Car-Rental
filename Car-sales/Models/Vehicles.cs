@@ -7,8 +7,12 @@ namespace Car_sales.Models
 {
     public class Vehicles
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
-        public bool IsComplete { get; set; }
+        public long VehicleId { get; set; }
+        public RefModelTypes ModelTypeCode { get; set; }
+        public string VehicleName { get; set; }
+        public DateTime LaunchDate { get; set; }
+        public string OtherDetails { get; set; }
+
+        public List<Sales> Sales { get; set; }
     }
 }
