@@ -13,11 +13,11 @@ namespace Car_sales.Models
         {
         }
 
-        public DbSet<Sales> Sales { get; set; }
-        public DbSet<Customers> Customers { get; set; }
-        public DbSet<Deliveries> Deliveries { get; set; }
+        public DbSet<Sale> Sale { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Delivery> Delivery { get; set; }
         public DbSet<RefModelTypes> RefModelTypes { get; set; }
-        public DbSet<Vehicles> Vehicles { get; set; }
+        public DbSet<Vehicle> Vehicle { get; set; }
 
     }
 }
