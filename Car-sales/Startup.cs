@@ -14,6 +14,8 @@ using Microsoft.EntityFrameworkCore;
 using Car_sales.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
+using System.IO;
 
 namespace Car_sales
 {
@@ -34,9 +36,27 @@ namespace Car_sales
             services.AddControllers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
+            // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Car-sale",
+                    Description = "A simple Car-sale ASP.NET Core Web API",
+                    TermsOfService = new Uri("https://example.com/terms"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "soundcloud19",
+                        Email = string.Empty,
+                        Url = new Uri("https://github.com/soundcloud19"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under LICX",
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
             });
 
         }
