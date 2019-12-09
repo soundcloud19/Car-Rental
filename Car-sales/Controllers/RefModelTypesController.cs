@@ -78,6 +78,8 @@ namespace Car_sales.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<RefModelTypes>> PostRefModelTypes(RefModelTypes refModelTypes)
         {
             _context.RefModelTypes.Add(refModelTypes);
