@@ -84,7 +84,9 @@ namespace Car_sales.Controllers
 
             return CreatedAtAction("GetDelivery", new { id = delivery.DeliveryId }, delivery);
         }
-
+        /// <summary>
+        /// Deletes a specific Delivery.
+        /// </summary>
         // DELETE: api/Deliveries/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Delivery>> DeleteDelivery(long id)

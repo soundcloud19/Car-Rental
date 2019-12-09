@@ -84,7 +84,9 @@ namespace Car_sales.Controllers
 
             return CreatedAtAction("GetRefModelTypes", new { id = refModelTypes.ModelTypeCode }, refModelTypes);
         }
-
+        /// <summary>
+        /// Deletes a specific RefModelType.
+        /// </summary>
         // DELETE: api/RefModelTypes/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<RefModelTypes>> DeleteRefModelTypes(long id)

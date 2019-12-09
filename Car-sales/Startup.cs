@@ -17,6 +17,7 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.IO;
 
+
 namespace Car_sales
 {
     public class Startup
@@ -35,7 +36,6 @@ namespace Car_sales
                opt.UseInMemoryDatabase("CarSales"));
             services.AddControllers();
 
-            // Register the Swagger generator, defining 1 or more Swagger documents
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -57,6 +57,10 @@ namespace Car_sales
                         Url = new Uri("https://example.com/license"),
                     }
                 });
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
 
         }

@@ -84,7 +84,9 @@ namespace Car_sales.Controllers
 
             return CreatedAtAction("GetSale", new { id = sale.SaleId }, sale);
         }
-
+        /// <summary>
+        /// Deletes a specific Sale.
+        /// </summary>
         // DELETE: api/Sales/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Sale>> DeleteSale(long id)

@@ -72,7 +72,24 @@ namespace Car_sales.Controllers
 
             return NoContent();
         }
-
+        /// <summary>
+        /// Creates a Customers.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Customers
+        ///     {
+        ///        "customerId": 1,
+        ///        "customerDetails": "Customer1"
+        ///        
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="customer"></param>
+        /// <returns>A newly created customer</returns>
+        /// <response code="201">Returns the newly created customer</response>
+        /// <response code="400">If the customer is null</response>  
         // POST: api/Customers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
@@ -85,6 +102,9 @@ namespace Car_sales.Controllers
             return CreatedAtAction("GetCustomer", new { id = customer.CustomerId }, customer);
         }
 
+        /// <summary>
+        /// Deletes a specific Customer.
+        /// </summary>
         // DELETE: api/Customers/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Customer>> DeleteCustomer(long id)
