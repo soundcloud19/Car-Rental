@@ -9,6 +9,7 @@ using Car_sales.Models;
 
 namespace Car_sales.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
