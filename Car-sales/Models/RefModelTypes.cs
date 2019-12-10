@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 
 namespace Car_sales.Models
 {
